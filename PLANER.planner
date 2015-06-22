@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<project name="Proyecto de Migracion de Sistemas a Software Libre" company="" manager="" phase="" project-start="20150701T000000Z" mrproject-version="2" calendar="1">
+  <properties/>
+  <phases>
+    <phase name="Fase 1"/>
+    <phase name="Fase 2"/>
+    <phase name="Fase 3"/>
+    <phase name="Fase 4"/>
+    <phase name="Fase 5"/>
+  </phases>
+  <calendars>
+    <day-types>
+      <day-type id="0" name="Jornada laboral" description="Un d&#xED;a de trabajo predeterminado"/>
+      <day-type id="1" name="Jornada de descanso" description="Un d&#xED;a de descanso predeterminado"/>
+      <day-type id="2" name="Usar base" description="Usar d&#xED;a del calendario base"/>
+    </day-types>
+    <calendar id="1" name="Predeterminado">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days/>
+    </calendar>
+  </calendars>
+  <tasks>
+    <task id="1" name="FASE 1" note="" work="194400" start="20150701T000000Z" end="20150717T170000Z" work-start="20150701T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="2" name="Charla introductoria sobre software libre" note="" work="28800" start="20150701T000000Z" end="20150701T170000Z" work-start="20150701T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="3" name="Instalacion de aplicaciones puente" note="" work="57600" start="20150701T170000Z" end="20150703T170000Z" work-start="20150702T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="2" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="4" name="Capacitacion de aplicativos libres" note="" work="108000" duration="288000" start="20150703T170000Z" end="20150717T170000Z" work-start="20150706T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <predecessors>
+          <predecessor id="1" predecessor-id="3" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="5" name="FASE 2" note="" work="232200" start="20150705T000000Z" end="20150710T093000Z" work-start="20150706T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="1" type="SS" lag="345600"/>
+      </predecessors>
+      <task id="6" name="Instalacion de la UPS" note="" work="1800" start="20150705T000000Z" end="20150706T083000Z" work-start="20150706T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="3" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="7" name="Servidor de Virtualizacion" note="" work="172800" start="20150706T083000Z" end="20150708T093000Z" work-start="20150706T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="6" type="FS"/>
+        </predecessors>
+        <task id="8" name="S.O." note="" work="10800" start="20150706T083000Z" end="20150706T113000Z" work-start="20150706T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="9" name="Instalacion de KVM" note="" work="7200" start="20150706T083000Z" end="20150706T103000Z" work-start="20150706T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="10" name="Configuracion de interfaces de red de KVM" note="" work="14400" start="20150706T103000Z" end="20150706T153000Z" work-start="20150706T103000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="9" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="11" name="VirtManager" note="" work="3600" start="20150706T103000Z" end="20150706T113000Z" work-start="20150706T103000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="9" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="12" name="Creacion Maquina Virtual 1" note="" work="57600" start="20150706T153000Z" end="20150707T103000Z" work-start="20150706T153000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="10" type="FS"/>
+          </predecessors>
+          <task id="13" name="Instalacion de OpenWRT" note="" work="57600" start="20150706T153000Z" end="20150707T103000Z" work-start="20150706T153000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <task id="14" name="DNS" note="" work="4500" start="20150706T153000Z" end="20150706T164500Z" work-start="20150706T153000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+            <task id="15" name="DHCP" note="" work="4500" start="20150706T153000Z" end="20150706T164500Z" work-start="20150706T153000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+            <task id="16" name="FIREWALL" note="" work="9900" start="20150706T153000Z" end="20150707T091500Z" work-start="20150706T153000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+            <task id="17" name="ROUTER" note="" work="9900" start="20150706T153000Z" end="20150707T091500Z" work-start="20150706T153000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+            <task id="18" name="SQUID" note="" work="14400" start="20150706T153000Z" end="20150707T103000Z" work-start="20150706T153000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+            <task id="19" name="OPENVPN" note="" work="14400" start="20150706T153000Z" end="20150707T103000Z" work-start="20150706T153000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+          </task>
+        </task>
+        <task id="20" name="Creacion Maquina Virtual 2" note="" work="7200" start="20150706T083000Z" end="20150706T103000Z" work-start="20150706T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <task id="21" name="NFS" note="" work="7200" start="20150706T083000Z" end="20150706T103000Z" work-start="20150706T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        </task>
+        <task id="22" name="Creacion Maquina Virtual 3" note="" work="21600" start="20150706T103000Z" end="20150707T083000Z" work-start="20150706T103000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="20" type="FS"/>
+          </predecessors>
+          <task id="23" name="LDAP" note="" work="21600" start="20150706T103000Z" end="20150707T083000Z" work-start="20150706T103000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        </task>
+        <task id="24" name="Creacion Maquina Virtual 4" note="" work="21600" start="20150707T083000Z" end="20150707T093000Z" work-start="20150707T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="22" type="FS"/>
+          </predecessors>
+          <task id="25" name="Webmin con sus respectivos modulos" note="" work="21600" start="20150707T083000Z" end="20150707T093000Z" work-start="20150707T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <task id="26" name="LDAP" note="" work="3600" start="20150707T083000Z" end="20150707T093000Z" work-start="20150707T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+            <task id="27" name="NGINX" note="" work="3600" start="20150707T083000Z" end="20150707T093000Z" work-start="20150707T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+            <task id="28" name="POSTGRES" note="" work="3600" start="20150707T083000Z" end="20150707T093000Z" work-start="20150707T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+            <task id="29" name="OpenVPN" note="" work="3600" start="20150707T083000Z" end="20150707T093000Z" work-start="20150707T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+            <task id="30" name="SQUID" note="" work="3600" start="20150707T083000Z" end="20150707T093000Z" work-start="20150707T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+            <task id="31" name="CUPS" note="" work="3600" start="20150707T083000Z" end="20150707T093000Z" work-start="20150707T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+          </task>
+        </task>
+        <task id="32" name="Creacion Maquina Virtual 5" note="" work="28800" start="20150707T093000Z" end="20150708T093000Z" work-start="20150707T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="24" type="FS"/>
+          </predecessors>
+          <task id="33" name="MAIL-N-A-BOX" note="" work="28800" start="20150707T093000Z" end="20150708T093000Z" work-start="20150707T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        </task>
+      </task>
+      <task id="34" name="Cambio en la Estructura de red" note="" work="28800" start="20150708T093000Z" end="20150709T093000Z" work-start="20150708T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="7" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="35" name="Migracion de los servicios" note="" work="28800" start="20150709T093000Z" end="20150710T093000Z" work-start="20150709T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="34" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="36" name="Fase 3" note="" work="345600" start="20150710T093000Z" end="20150728T143000Z" work-start="20150710T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="35" type="FS"/>
+      </predecessors>
+      <task id="37" name="Instalacion Server de Backup (Dell 2900 &quot;viejo&quot;)" note="" work="14400" start="20150710T093000Z" end="20150710T143000Z" work-start="20150710T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="38" name="Traspaso de datos de Backup del servidor HP ProLiant" note="" work="14400" start="20150710T143000Z" end="20150713T093000Z" work-start="20150710T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="37" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="39" name="Creacion Maquina Virtual 6" note="" work="7200" start="20150710T143000Z" end="20150710T163000Z" work-start="20150710T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="37" type="FS"/>
+        </predecessors>
+        <task id="40" name="POSTGRESQL" note="" work="7200" start="20150710T143000Z" end="20150710T163000Z" work-start="20150710T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      </task>
+      <task id="41" name="Creacion Maquina Virtual 7" note="" work="21600" start="20150710T163000Z" end="20150713T143000Z" work-start="20150710T163000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="39" type="FS"/>
+        </predecessors>
+        <task id="42" name="OpenERP con sus respectivos modulos" note="" work="21600" start="20150710T163000Z" end="20150713T143000Z" work-start="20150710T163000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      </task>
+      <task id="43" name="Capacitacion de responsables de areas en OpenERP" note="" work="36000" duration="288000" start="20150713T143000Z" end="20150727T143000Z" work-start="20150713T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <predecessors>
+          <predecessor id="1" predecessor-id="41" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="44" name="Migracion de Base de Datos de ERP privativos y software Sage" note="" work="115200" start="20150713T143000Z" end="20150717T143000Z" work-start="20150713T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="43" type="SS"/>
+        </predecessors>
+      </task>
+      <task id="45" name="Capacitacion del resto del personal en OpenERP" note="" work="108000" duration="288000" start="20150713T143000Z" end="20150727T143000Z" work-start="20150713T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <predecessors>
+          <predecessor id="1" predecessor-id="43" type="SS"/>
+        </predecessors>
+      </task>
+      <task id="46" name="Implementacion del nuevo Sistema" note="" work="28800" start="20150727T143000Z" end="20150728T143000Z" work-start="20150727T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="45" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="47" name="Fase 4" note="" work="234000" start="20150728T143000Z" end="20150813T143000Z" work-start="20150728T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="36" type="FS"/>
+      </predecessors>
+      <task id="48" name="Instalacion de Xubuntu en doble booteo" note="" work="57600" start="20150728T143000Z" end="20150730T143000Z" work-start="20150728T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="49" name="Inicio capacitacion Xubuntu" note="" work="108000" duration="288000" start="20150730T143000Z" end="20150813T143000Z" work-start="20150730T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <predecessors>
+          <predecessor id="1" predecessor-id="48" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="50" name="Eliminar Windows del Grub" note="" work="28800" start="20150804T143000Z" end="20150805T143000Z" work-start="20150804T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="49" type="SS" lag="432000"/>
+        </predecessors>
+      </task>
+      <task id="51" name="Re-configuracion de LDAP" note="" work="28800" start="20150730T143000Z" end="20150731T143000Z" work-start="20150730T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="48" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="52" name="Instalacion de CUPS en tres puestos de trabajo" note="" work="10800" start="20150731T143000Z" end="20150803T083000Z" work-start="20150731T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="51" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="53" name="Fase 5" note="" work="691200" start="20150813T143000Z" end="20150916T143000Z" work-start="20150813T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="47" type="FS"/>
+      </predecessors>
+      <task id="54" name="Periodo de adaptacion" note="" work="633600" start="20150813T143000Z" end="20150914T143000Z" work-start="20150813T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="55" name="Eliminacion total del S.O. privativo de MS" note="" work="57600" start="20150914T143000Z" end="20150916T143000Z" work-start="20150914T143000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="54" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="56" name="Evaluacion" note="" work="0" start="20150813T143000Z" end="20150813T143000Z" work-start="20150813T143000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work"/>
+    </task>
+  </tasks>
+  <resource-groups/>
+  <resources/>
+  <allocations/>
+</project>
